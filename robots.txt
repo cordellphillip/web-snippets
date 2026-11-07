@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cordellphillip.github.io/web-snippets/sitemap.xml
