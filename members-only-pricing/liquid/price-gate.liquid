@@ -1,0 +1,30 @@
+{%- comment -%}
+  Shows a price only to customers who carry the "approved" tag.
+  Everyone else sees a "Members only" label and a disabled button.
+
+  Usage inside a product card:
+    {% render 'price-gate', product: product %}
+
+  Set the tag you approve customers with in `approved_tag` below.
+{%- endcomment -%}
+
+{%- assign approved_tag = 'approved' -%}
+{%- assign can_see_price = false -%}
+
+{%- if customer and customer.tags contains approved_tag -%}
+  {%- assign can_see_price = true -%}
+{%- endif -%}
+
+<div class="price-slot">
+  {%- if can_see_price -%}
+    <span class="price">{{ product.price | money }}</span>
+  {%- else -%}
+    <span class="lock">Members only</span>
+  {%- endif -%}
+</div>
+
+{%- if can_see_price -%}
+  <button type="submit" class="buy" name="add">Add to cart</button>
+{%- else -%}
+  <a class="buy" href="{{ routes.account_login_url }}">Log in to order</a>
+{%- endif -%}

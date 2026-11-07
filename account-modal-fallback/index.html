@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open an account pop-up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <h1>Open an account pop-up</h1>
+  <p class="lede">An application form in a native <code>&lt;dialog&gt;</code>. It sends without reloading the page. If that request fails, it falls back to a normal form submit so the person's answers aren't lost.</p>
+
+  <button type="button" class="primary" id="open">Open an account</button>
+
+  <label class="sim">
+    <input type="checkbox" id="fail">
+    <span>Pretend the scripted request fails (demo only)</span>
+  </label>
+</main>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <form id="form" method="post" action="thanks.html">
+    <div class="head">
+      <h2 id="dlg-title">Open an account</h2>
+      <button type="button" class="close" id="close" aria-label="Close">&times;</button>
+    </div>
+
+    <label>Business name
+      <input name="business" required autocomplete="organization">
+    </label>
+    <label>Your name
+      <input name="name" required autocomplete="name">
+    </label>
+    <label>Email
+      <input name="email" type="email" required autocomplete="email">
+    </label>
+    <label>What do you buy and how often?
+      <textarea name="notes" rows="3"></textarea>
+    </label>
+
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <button type="submit" class="primary" id="send">Send application</button>
+  </form>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>

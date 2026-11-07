@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web snippets</title>
+  <style>
+    :root { --ink:#16191d; --muted:#5d6670; --line:#e2e5e8; --accent:#2f6f4f; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); line-height:1.5; }
+    main { max-width:56rem; margin:0 auto; padding:3rem 1.25rem 4rem; }
+    h1 { font-size:clamp(1.8rem,5vw,2.6rem); margin:0 0 .5rem; }
+    .lede { color:var(--muted); max-width:36rem; margin:0 0 2rem; }
+    .list { list-style:none; padding:0; margin:0; display:grid; gap:1rem; grid-template-columns:repeat(auto-fill,minmax(16rem,1fr)); }
+    .list a { display:block; height:100%; padding:1.2rem; border:1px solid var(--line); border-radius:.9rem; text-decoration:none; color:inherit; }
+    .list a:hover { border-color:var(--ink); }
+    .list b { display:block; font-size:1.05rem; margin-bottom:.3rem; }
+    .list span { color:var(--muted); font-size:.95rem; }
+    :focus-visible { outline:3px solid #e5432f; outline-offset:2px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Web snippets</h1>
+  <p class="lede">Copy-and-paste HTML, CSS and JavaScript for common website pieces. No libraries, no build step. Open a demo, then take what you need.</p>
+  <ul class="list">
+    <li><a href="floating-hero-css/index.html"><b>Floating hero</b><span>Images drift behind a headline with CSS only.</span></a></li>
+    <li><a href="category-carousel/index.html"><b>Category carousel</b><span>Swipe, click or use arrow keys.</span></a></li>
+    <li><a href="scroll-reveal-text/index.html"><b>Scroll reveal</b><span>Lines appear one by one as you scroll.</span></a></li>
+    <li><a href="account-modal-fallback/index.html"><b>Sign-up pop-up</b><span>A dialog form with a safe fallback.</span></a></li>
+    <li><a href="members-only-pricing/index.html"><b>Members-only pricing</b><span>Prices hidden until a buyer is approved.</span></a></li>
+  </ul>
+</main>
+</body>
+</html>

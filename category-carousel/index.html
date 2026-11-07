@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category carousel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <h1>Shop by category</h1>
+  <p class="lede">A swipeable row of cards. It works with touch, mouse, keyboard and screen readers, and it still works with JavaScript turned off.</p>
+
+  <section class="carousel" aria-roledescription="carousel" aria-label="Categories">
+    <ul class="track" id="track" tabindex="0" aria-label="Scrollable list of categories">
+      <li class="slide" style="--c:#d9e8c8"><h2>Garden</h2><p>Things that grow.</p><a href="#">Browse</a></li>
+      <li class="slide" style="--c:#f2d9c4"><h2>Kitchen</h2><p>Everyday cooking.</p><a href="#">Browse</a></li>
+      <li class="slide" style="--c:#d4dff2"><h2>Cold</h2><p>Keep it chilled.</p><a href="#">Browse</a></li>
+      <li class="slide" style="--c:#eddcf0"><h2>Dry goods</h2><p>Shelf-stable staples.</p><a href="#">Browse</a></li>
+      <li class="slide" style="--c:#f5ecc2"><h2>Supplies</h2><p>Gloves, wipes, bags.</p><a href="#">Browse</a></li>
+      <li class="slide" style="--c:#cfeee6"><h2>Seasonal</h2><p>Limited runs.</p><a href="#">Browse</a></li>
+    </ul>
+    <div class="controls">
+      <button type="button" id="prev" aria-label="Previous category">&larr;</button>
+      <div class="dots" id="dots"></div>
+      <button type="button" id="next" aria-label="Next category">&rarr;</button>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
